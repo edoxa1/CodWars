@@ -1,3 +1,3 @@
 ﻿<h1>Codewars</h1>
-<p>Here i do Katas from codewars.net</p>
+<p>Here i do Katas from <a href=" codewars.net">CodeWars</a></p>
 
