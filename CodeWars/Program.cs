@@ -8,7 +8,6 @@ namespace CodeWars
         {
             //var countingDuplicates = new CountingDuplicates();
             //Console.WriteLine(countingDuplicates.Solve("aaabbbbc"));
-            
             var scrablies = new Scrablies();
             Console.WriteLine(scrablies.Scramble("scriptsjava", "javascripts"));
         }
