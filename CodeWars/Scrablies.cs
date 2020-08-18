@@ -17,14 +17,22 @@ namespace CodeWars
             sortedString1 = str1.ToList();
             sortedString2 = str2.ToList();
             
+            
             sortedString1.Sort();
             sortedString2.Sort();
 
-            sortedString1.ForEach(delegate(char c) { Console.Write($"{c} "); });
+            sortedString1.ForEach(delegate(char c) { Console.Write($"{c}"); });
             Console.WriteLine();
-            sortedString2.ForEach(delegate(char c) { Console.Write($"{c} "); });
+            sortedString2.ForEach(delegate(char c) { Console.Write($"{c}"); });
 
-            if (sortedString1 == sortedString2) result = true;
+            if (sortedString1.Count == sortedString2.Count)
+            {
+                var tempString1 = "";
+                var tempString2 = "";
+                sortedString1.ForEach(delegate(char c) { tempString1 += c.ToString(); });
+                sortedString2.ForEach(delegate(char c) { tempString2 += c.ToString(); });
+                if (tempString1 == tempString2) result = true;
+            }
             else
             {
                 if (sortedString1.Count > sortedString2.Count)
@@ -66,9 +74,11 @@ namespace CodeWars
                 }
                 else
                 {
+                    Console.WriteLine("1");
                     result = false;
                 }
             }
+            Console.WriteLine($"\nis two strings equal: {result}");
             return result;
         }
     }
